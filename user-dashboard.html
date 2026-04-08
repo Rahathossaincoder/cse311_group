@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Traffic Complaint System</title>
+    <link rel="stylesheet" href="user-dashboard.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Traffic Complaint System</div>
+            <ul class="nav-links">
+                <li><a href="user-dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="submit-complaint.html">Submit Complaint</a></li>
+                <li><a href="complaint-history.html">My Complaints</a></li>
+                <li><a href="home.html" class="logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sidebar and Main Content -->
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="user-profile">
+                <div class="user-avatar">👤</div>
+                <h3>John Doe</h3>
+                <p>john.doe@email.com</p>
+            </div>
+
+            <ul class="sidebar-menu">
+                <li><a href="user-dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="submit-complaint.html">Submit New Complaint</a></li>
+                <li><a href="complaint-history.html">View All Complaints</a></li>
+                <li><a href="profile-settings.html">Profile Settings</a></li>
+                <li><a href="notifications.html">Notifications</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Welcome Section -->
+            <section class="welcome-section">
+                <h1>Welcome, John!</h1>
+                <p>Here's your traffic complaint dashboard overview</p>
+            </section>
+
+            <!-- Statistics Cards -->
+            <section class="stats-section">
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-info">
+                        <h3>Total Complaints</h3>
+                        <p class="stat-number">12</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">⏳</div>
+                    <div class="stat-info">
+                        <h3>Pending</h3>
+                        <p class="stat-number">3</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">⚙️</div>
+                    <div class="stat-info">
+                        <h3>In Progress</h3>
+                        <p class="stat-number">5</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-info">
+                        <h3>Resolved</h3>
+                        <p class="stat-number">4</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Complaints Section -->
+            <section class="recent-complaints">
+                <div class="section-header">
+                    <h2>Recent Complaints</h2>
+                    <a href="complaint-history.html" class="view-all">View All →</a>
+                </div>
+
+                <table class="complaints-table">
+                    <thead>
+                        <tr>
+                            <th>Complaint ID</th>
+                            <th>Category</th>
+                            <th>Location</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#CP001</td>
+                            <td>Illegal Parking</td>
+                            <td>Gulshan, Dhaka</td>
+                            <td>2026-04-05</td>
+                            <td><span class="status pending">Pending</span></td>
+                            <td><a href="complaint-details.html" class="view-btn">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>#CP002</td>
+                            <td>Broken Signals</td>
+                            <td>Mirpur, Dhaka</td>
+                            <td>2026-04-03</td>
+                            <td><span class="status progress">In Progress</span></td>
+                            <td><a href="complaint-details.html" class="view-btn">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>#CP003</td>
+                            <td>Road Damage</td>
+                            <td>Banani, Dhaka</td>
+                            <td>2026-04-01</td>
+                            <td><span class="status resolved">Resolved</span></td>
+                            <td><a href="complaint-details.html" class="view-btn">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>#CP004</td>
+                            <td>Blockage</td>
+                            <td>Dhanmondi, Dhaka</td>
+                            <td>2026-03-30</td>
+                            <td><span class="status progress">In Progress</span></td>
+                            <td><a href="complaint-details.html" class="view-btn">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>#CP005</td>
+                            <td>Accident</td>
+                            <td>Motijheel, Dhaka</td>
+                            <td>2026-03-28</td>
+                            <td><span class="status resolved">Resolved</span></td>
+                            <td><a href="complaint-details.html" class="view-btn">View</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Quick Actions Section -->
+            <section class="quick-actions">
+                <h2>Quick Actions</h2>
+                <div class="actions-grid">
+                    <a href="submit-complaint.html" class="action-card">
+                        <div class="action-icon">➕</div>
+                        <h3>Submit New Complaint</h3>
+                        <p>Report a new traffic issue</p>
+                    </a>
+
+                    <a href="complaint-history.html" class="action-card">
+                        <div class="action-icon">📋</div>
+                        <h3>View Complaints</h3>
+                        <p>See all your complaints</p>
+                    </a>
+
+                    <a href="profile-settings.html" class="action-card">
+                        <div class="action-icon">⚙️</div>
+                        <h3>Settings</h3>
+                        <p>Manage your profile</p>
+                    </a>
+
+                    <a href="notifications.html" class="action-card">
+                        <div class="action-icon">🔔</div>
+                        <h3>Notifications</h3>
+                        <p>Check your updates</p>
+                    </a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Traffic Complaint System. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

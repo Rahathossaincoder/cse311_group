@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports & Analytics - Traffic Complaint System</title>
+    <link rel="stylesheet" href="reports-analytics.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Traffic Complaint System</div>
+            <ul class="nav-links">
+                <li><a href="user-dashboard.html">Dashboard</a></li>
+                <li><a href="submit-complaint.html">Submit Complaint</a></li>
+                <li><a href="complaint-history.html">My Complaints</a></li>
+                <li><a href="home.html" class="logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header-section">
+            <h1>Reports & Analytics</h1>
+            <p>System-wide traffic complaint statistics and insights</p>
+        </div>
+
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <div class="filter-group">
+                <label for="dateRange">Date Range:</label>
+                <select id="dateRange" name="dateRange">
+                    <option value="7days">Last 7 Days</option>
+                    <option value="30days">Last 30 Days</option>
+                    <option value="90days">Last 90 Days</option>
+                    <option value="year">Last Year</option>
+                    <option value="all">All Time</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="location">Location:</label>
+                <select id="location" name="location">
+                    <option value="">All Locations</option>
+                    <option value="dhaka">Dhaka</option>
+                    <option value="chittagong">Chittagong</option>
+                    <option value="khulna">Khulna</option>
+                    <option value="rajshahi">Rajshahi</option>
+                    <option value="sylhet">Sylhet</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="category">Category:</label>
+                <select id="category" name="category">
+                    <option value="">All Categories</option>
+                    <option value="illegal-parking">Illegal Parking</option>
+                    <option value="broken-signals">Broken Signals</option>
+                    <option value="road-damage">Road Damage</option>
+                    <option value="blockage">Road Blockage</option>
+                    <option value="accident">Accident</option>
+                </select>
+            </div>
+
+            <button class="filter-btn">Apply Filters</button>
+        </div>
+
+        <!-- Overall Statistics Section -->
+        <section class="stats-overview">
+            <h2>Overall Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card large">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-content">
+                        <p class="stat-label">Total Complaints</p>
+                        <p class="stat-value">1,245</p>
+                        <p class="stat-change increase">↑ 12% from last month</p>
+                    </div>
+                </div>
+
+                <div class="stat-card large">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-content">
+                        <p class="stat-label">Resolved</p>
+                        <p class="stat-value">856</p>
+                        <p class="stat-change">68.7% Resolution Rate</p>
+                    </div>
+                </div>
+
+                <div class="stat-card large">
+                    <div class="stat-icon">⏳</div>
+                    <div class="stat-content">
+                        <p class="stat-label">Pending</p>
+                        <p class="stat-value">189</p>
+                        <p class="stat-change">15.2% of Total</p>
+                    </div>
+                </div>
+
+                <div class="stat-card large">
+                    <div class="stat-icon">⚙️</div>
+                    <div class="stat-content">
+                        <p class="stat-label">In Progress</p>
+                        <p class="stat-value">200</p>
+                        <p class="stat-change">16.1% of Total</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Analysis Section -->
+        <section class="analysis-section">
+            <h2>Complaint Category Analysis</h2>
+            <div class="analysis-grid">
+                <div class="analysis-card">
+                    <h3>Complaints by Category</h3>
+                    <div class="chart-bars">
+                        <div class="bar-item">
+                            <p class="bar-label">Illegal Parking</p>
+                            <div class="bar-container">
+                                <div class="bar" style="width: 35%;"></div>
+                            </div>
+                            <p class="bar-value">435 (35%)</p>
+                        </div>
+
+                        <div class="bar-item">
+                            <p class="bar-label">Broken Signals</p>
+                            <div class="bar-container">
+                                <div class="bar" style="width: 25%;"></div>
+                            </div>
+                            <p class="bar-value">311 (25%)</p>
+                        </div>
+
+                        <div class="bar-item">
+                            <p class="bar-label">Road Damage</p>
+                            <div class="bar-container">
+                                <div class="bar" style="width: 18%;"></div>
+                            </div>
+                            <p class="bar-value">224 (18%)</p>
+                        </div>
+
+                        <div class="bar-item">
+                            <p class="bar-label">Road Blockage</p>
+                            <div class="bar-container">
+                                <div class="bar" style="width: 15%;"></div>
+                            </div>
+                            <p class="bar-value">186 (15%)</p>
+                        </div>
+
+                        <div class="bar-item">
+                            <p class="bar-label">Accident</p>
+                            <div class="bar-container">
+                                <div class="bar" style="width: 7%;"></div>
+                            </div>
+                            <p class="bar-value">89 (7%)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="analysis-card">
+                    <h3>Priority Distribution</h3>
+                    <div class="priority-chart">
+                        <div class="priority-item">
+                            <div class="priority-box urgent">
+                                <p class="priority-label">Urgent</p>
+                                <p class="priority-count">156</p>
+                            </div>
+                        </div>
+
+                        <div class="priority-item">
+                            <div class="priority-box high">
+                                <p class="priority-label">High</p>
+                                <p class="priority-count">389</p>
+                            </div>
+                        </div>
+
+                        <div class="priority-item">
+                            <div class="priority-box medium">
+                                <p class="priority-label">Medium</p>
+                                <p class="priority-count">542</p>
+                            </div>
+                        </div>
+
+                        <div class="priority-item">
+                            <div class="priority-box low">
+                                <p class="priority-label">Low</p>
+                                <p class="priority-count">158</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Status Analysis Section -->
+        <section class="analysis-section">
+            <h2>Complaint Status Analysis</h2>
+            <div class="status-grid">
+                <div class="status-item">
+                    <div class="status-circle pending">
+                        <span class="percentage">15.2%</span>
+                    </div>
+                    <p class="status-name">Pending</p>
+                    <p class="status-count">189 Complaints</p>
+                </div>
+
+                <div class="status-item">
+                    <div class="status-circle progress">
+                        <span class="percentage">16.1%</span>
+                    </div>
+                    <p class="status-name">In Progress</p>
+                    <p class="status-count">200 Complaints</p>
+                </div>
+
+                <div class="status-item">
+                    <div class="status-circle resolved">
+                        <span class="percentage">68.7%</span>
+                    </div>
+                    <p class="status-name">Resolved</p>
+                    <p class="status-count">856 Complaints</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top Locations Section -->
+        <section class="analysis-section">
+            <h2>Top Complaint Locations</h2>
+            <div class="locations-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Location</th>
+                            <th>Area</th>
+                            <th>Complaints</th>
+                            <th>Resolved</th>
+                            <th>Success Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Gulshan Avenue</td>
+                            <td>Gulshan</td>
+                            <td>156</td>
+                            <td>128</td>
+                            <td><span class="success-rate high">82%</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Mirpur Road</td>
+                            <td>Mirpur</td>
+                            <td>142</td>
+                            <td>106</td>
+                            <td><span class="success-rate medium">75%</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>Banani Lake Road</td>
+                            <td>Banani</td>
+                            <td>128</td>
+                            <td>95</td>
+                            <td><span class="success-rate medium">74%</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>4</td>
+                            <td>Dhanmondi Road 5</td>
+                            <td>Dhanmondi</td>
+                            <td>115</td>
+                            <td>76</td>
+                            <td><span class="success-rate low">66%</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>5</td>
+                            <td>Uttara Madarbari</td>
+                            <td>Uttara</td>
+                            <td>98</td>
+                            <td>72</td>
+                            <td><span class="success-rate medium">73%</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Monthly Trend Section -->
+        <section class="analysis-section">
+            <h2>Monthly Complaint Trend</h2>
+            <div class="trend-chart">
+                <div class="trend-item">
+                    <p class="month">Jan</p>
+                    <div class="trend-bar-container">
+                        <div class="trend-bar" style="height: 45%;"></div>
+                    </div>
+                    <p class="trend-value">156</p>
+                </div>
+
+                <div class="trend-item">
+                    <p class="month">Feb</p>
+                    <div class="trend-bar-container">
+                        <div class="trend-bar" style="height: 52%;"></div>
+                    </div>
+                    <p class="trend-value">182</p>
+                </div>
+
+                <div class="trend-item">
+                    <p class="month">Mar</p>
+                    <div class="trend-bar-container">
+                        <div class="trend-bar" style="height: 68%;"></div>
+                    </div>
+                    <p class="trend-value">235</p>
+                </div>
+
+                <div class="trend-item">
+                    <p class="month">Apr</p>
+                    <div class="trend-bar-container">
+                        <div class="trend-bar" style="height: 85%;"></div>
+                    </div>
+                    <p class="trend-value">295</p>
+                </div>
+
+                <div class="trend-item">
+                    <p class="month">May</p>
+                    <div class="trend-bar-container">
+                        <div class="trend-bar" style="height: 75%;"></div>
+                    </div>
+                    <p class="trend-value">262</p>
+                </div>
+
+                <div class="trend-item">
+                    <p class="month">Jun</p>
+                    <div class="trend-bar-container">
+                        <div class="trend-bar" style="height: 90%;"></div>
+                    </div>
+                    <p class="trend-value">315</p>
+                </div>
+
+                <div class="trend-item">
+                    <p class="month">Jul</p>
+                    <div class="trend-bar-container">
+                        <div class="trend-bar" style="height: 100%;"></div>
+                    </div>
+                    <p class="trend-value">348</p>
+                </div>
+
+                <div class="trend-item">
+                    <p class="month">Aug</p>
+                    <div class="trend-bar-container">
+                        <div class="trend-bar" style="height: 88%;"></div>
+                    </div>
+                    <p class="trend-value">308</p>
+                </div>
+
+                <div class="trend-item">
+                    <p class="month">Sep</p>
+                    <div class="trend-bar-container">
+                        <div class="trend-bar" style="height: 72%;"></div>
+                    </div>
+                    <p class="trend-value">252</p>
+                </div>
+
+                <div class="trend-item">
+                    <p class="month">Oct</p>
+                    <div class="trend-bar-container">
+                        <div class="trend-bar" style="height: 65%;"></div>
+                    </div>
+                    <p class="trend-value">227</p>
+                </div>
+
+                <div class="trend-item">
+                    <p class="month">Nov</p>
+                    <div class="trend-bar-container">
+                        <div class="trend-bar" style="height: 78%;"></div>
+                    </div>
+                    <p class="trend-value">272</p>
+                </div>
+
+                <div class="trend-item">
+                    <p class="month">Dec</p>
+                    <div class="trend-bar-container">
+                        <div class="trend-bar" style="height: 92%;"></div>
+                    </div>
+                    <p class="trend-value">328</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Insights Section -->
+        <section class="insights-section">
+            <h2>Key Insights</h2>
+            <div class="insights-grid">
+                <div class="insight-card">
+                    <div class="insight-icon">🎯</div>
+                    <h3>Most Reported Issue</h3>
+                    <p>Illegal Parking accounts for 35% of all complaints, with Gulshan Avenue being the hotspot.</p>
+                </div>
+
+                <div class="insight-card">
+                    <div class="insight-icon">📈</div>
+                    <h3>Growth Trend</h3>
+                    <p>Complaints increased by 12% this month compared to the previous month, showing increased awareness.</p>
+                </div>
+
+                <div class="insight-card">
+                    <div class="insight-icon">⚡</div>
+                    <h3>Resolution Speed</h3>
+                    <p>Average resolution time is 8-10 days for urgent complaints and 15-20 days for others.</p>
+                </div>
+
+                <div class="insight-card">
+                    <div class="insight-icon">🏆</div>
+                    <h3>Best Performing Area</h3>
+                    <p>Gulshan Avenue has the highest resolution rate at 82%, setting a benchmark for other areas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons-section">
+            <button class="btn btn-primary">Download Report (PDF)</button>
+            <button class="btn btn-secondary">Export Data (Excel)</button>
+            <a href="user-dashboard.html" class="btn btn-tertiary">Back to Dashboard</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Traffic Complaint System. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

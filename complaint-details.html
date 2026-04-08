@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Details - Traffic Complaint System</title>
+    <link rel="stylesheet" href="complaint-details.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Traffic Complaint System</div>
+            <ul class="nav-links">
+                <li><a href="user-dashboard.html">Dashboard</a></li>
+                <li><a href="submit-complaint.html">Submit Complaint</a></li>
+                <li><a href="complaint-history.html" class="active">My Complaints</a></li>
+                <li><a href="home.html" class="logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Back Button -->
+        <a href="complaint-history.html" class="back-link">← Back to Complaints</a>
+
+        <!-- Complaint Card -->
+        <div class="complaint-details-card">
+            <!-- Header -->
+            <div class="detail-header">
+                <div class="header-content">
+                    <h1>Complaint #CP001</h1>
+                    <p class="submitted-date">Submitted on: April 5, 2026</p>
+                </div>
+                <div class="status-badge">
+                    <span class="status pending">Pending</span>
+                </div>
+            </div>
+
+            <!-- Main Details Grid -->
+            <div class="details-grid">
+                <!-- Left Column -->
+                <div class="details-column">
+                    <section class="detail-section">
+                        <h2>Complaint Information</h2>
+                        
+                        <div class="detail-item">
+                            <label>Category</label>
+                            <p>Illegal Parking</p>
+                        </div>
+
+                        <div class="detail-item">
+                            <label>Priority Level</label>
+                            <p><span class="priority high">High</span></p>
+                        </div>
+
+                        <div class="detail-item">
+                            <label>Status</label>
+                            <p><span class="status pending">Pending Review</span></p>
+                        </div>
+
+                        <div class="detail-item">
+                            <label>Complaint ID</label>
+                            <p>#CP001</p>
+                        </div>
+                    </section>
+
+                    <!-- Location Details -->
+                    <section class="detail-section">
+                        <h2>Location Details</h2>
+                        
+                        <div class="detail-item">
+                            <label>Road/Area Name</label>
+                            <p>Gulshan Avenue</p>
+                        </div>
+
+                        <div class="detail-item">
+                            <label>Area/Thana</label>
+                            <p>Gulshan</p>
+                        </div>
+
+                        <div class="detail-item">
+                            <label>City</label>
+                            <p>Dhaka</p>
+                        </div>
+
+                        <div class="detail-item">
+                            <label>Landmark</label>
+                            <p>Near Gulshan Plaza</p>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Right Column -->
+                <div class="details-column">
+                    <!-- Submitter Information -->
+                    <section class="detail-section">
+                        <h2>Your Information</h2>
+                        
+                        <div class="detail-item">
+                            <label>Full Name</label>
+                            <p>John Doe</p>
+                        </div>
+
+                        <div class="detail-item">
+                            <label>Email</label>
+                            <p>john.doe@email.com</p>
+                        </div>
+
+                        <div class="detail-item">
+                            <label>Phone Number</label>
+                            <p>01712345678</p>
+                        </div>
+                    </section>
+
+                    <!-- Timeline -->
+                    <section class="detail-section">
+                        <h2>Timeline</h2>
+                        
+                        <div class="timeline">
+                            <div class="timeline-item completed">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <p class="timeline-title">Complaint Submitted</p>
+                                    <p class="timeline-date">April 5, 2026 at 2:30 PM</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <p class="timeline-title">Under Review</p>
+                                    <p class="timeline-date">Awaiting admin review</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <p class="timeline-title">In Progress</p>
+                                    <p class="timeline-date">Pending</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <p class="timeline-title">Resolved</p>
+                                    <p class="timeline-date">Pending</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- Description Section -->
+            <section class="detail-section full-width">
+                <h2>Complaint Description</h2>
+                <div class="description-box">
+                    <p>
+                        A car has been illegally parked on the main road (Gulshan Avenue) near Gulshan Plaza for the past 3 days. 
+                        This is causing traffic congestion and making it difficult for other vehicles to pass. The vehicle appears 
+                        to be abandoned and has no visible owner contact. This is blocking the traffic flow during peak hours and 
+                        should be removed immediately to prevent further disruptions.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Evidence Section -->
+            <section class="detail-section full-width">
+                <h2>Evidence & Attachments</h2>
+                <div class="evidence-box">
+                    <div class="evidence-item">
+                        <div class="evidence-image">
+                            <img src="https://via.placeholder.com/300x200?text=Complaint+Photo+1" alt="Evidence Photo 1">
+                        </div>
+                        <div class="evidence-info">
+                            <p class="evidence-name">complaint_photo_1.jpg</p>
+                            <p class="evidence-size">2.5 MB</p>
+                            <p class="evidence-date">Uploaded: April 5, 2026</p>
+                        </div>
+                    </div>
+
+                    <div class="evidence-item">
+                        <div class="evidence-image">
+                            <img src="https://via.placeholder.com/300x200?text=Complaint+Photo+2" alt="Evidence Photo 2">
+                        </div>
+                        <div class="evidence-info">
+                            <p class="evidence-name">complaint_photo_2.jpg</p>
+                            <p class="evidence-size">2.1 MB</p>
+                            <p class="evidence-date">Uploaded: April 5, 2026</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Admin Response Section -->
+            <section class="detail-section full-width">
+                <h2>Admin Response</h2>
+                <div class="admin-response-box">
+                    <p class="no-response">No response from admin yet. Your complaint is pending review.</p>
+                </div>
+            </section>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons-section">
+                <a href="complaint-history.html" class="btn btn-secondary">Back to List</a>
+                <a href="submit-complaint.html" class="btn btn-primary">Submit Another Complaint</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Traffic Complaint System. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
