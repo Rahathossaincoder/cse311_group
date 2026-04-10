@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Complaints - Traffic Complaint System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🚦 Traffic Complaint System</div>
+            <ul class="nav-links">
+                <li><a href="user-dashboard.html">Dashboard</a></li>
+                <li><a href="submit-complaint.html">Submit Complaint</a></li>
+                <li><a href="my-complaints.html" class="active">My Complaints</a></li>
+                <li><a href="index.html" class="logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Container -->
+    <div class="page-container">
+        <h1>My Complaints</h1>
+
+        <!-- Filters -->
+        <div class="filters">
+            <select>
+                <option>All Status</option>
+                <option>Pending</option>
+                <option>In Progress</option>
+                <option>Resolved</option>
+            </select>
+            <select>
+                <option>All Categories</option>
+                <option>Illegal Parking</option>
+                <option>Broken Signals</option>
+                <option>Road Damage</option>
+                <option>Road Blockage</option>
+                <option>Accident</option>
+            </select>
+        </div>
+
+        <!-- Complaints Table -->
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Category</th>
+                    <th>Location</th>
+                    <th>Submitted</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#C001</td>
+                    <td>Illegal Parking</td>
+                    <td>Gulshan, Dhaka</td>
+                    <td>2026-04-05</td>
+                    <td><span class="badge pending">Pending</span></td>
+                    <td><a href="complaint-detail.html" class="link">View</a></td>
+                </tr>
+                <tr>
+                    <td>#C002</td>
+                    <td>Broken Signal</td>
+                    <td>Mirpur, Dhaka</td>
+                    <td>2026-04-03</td>
+                    <td><span class="badge progress">In Progress</span></td>
+                    <td><a href="complaint-detail.html" class="link">View</a></td>
+                </tr>
+                <tr>
+                    <td>#C003</td>
+                    <td>Road Damage</td>
+                    <td>Banani, Dhaka</td>
+                    <td>2026-04-01</td>
+                    <td><span class="badge resolved">Resolved</span></td>
+                    <td><a href="complaint-detail.html" class="link">View</a></td>
+                </tr>
+                <tr>
+                    <td>#C004</td>
+                    <td>Road Blockage</td>
+                    <td>Dhanmondi, Dhaka</td>
+                    <td>2026-03-30</td>
+                    <td><span class="badge progress">In Progress</span></td>
+                    <td><a href="complaint-detail.html" class="link">View</a></td>
+                </tr>
+                <tr>
+                    <td>#C005</td>
+                    <td>Accident</td>
+                    <td>Motijheel, Dhaka</td>
+                    <td>2026-03-28</td>
+                    <td><span class="badge resolved">Resolved</span></td>
+                    <td><a href="complaint-detail.html" class="link">View</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a href="submit-complaint.html" class="btn btn-primary mt">Submit New Complaint</a>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Traffic Complaint System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

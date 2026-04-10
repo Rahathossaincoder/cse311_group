@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management - Traffic Complaint System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar admin-nav">
+        <div class="nav-container">
+            <div class="logo">👮 Admin Panel - Traffic System</div>
+            <ul class="nav-links">
+                <li><a href="admin-dashboard.html">Dashboard</a></li>
+                <li><a href="admin-complaints.html">Manage Complaints</a></li>
+                <li><a href="admin-reports.html">Reports</a></li>
+                <li><a href="admin-users.html" class="active">Users</a></li>
+                <li><a href="index.html" class="logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Container -->
+    <div class="page-container">
+        <h1>User Management</h1>
+
+        <!-- Filters -->
+        <div class="filters">
+            <select>
+                <option>All Users</option>
+                <option>Active</option>
+                <option>Inactive</option>
+                <option>Suspended</option>
+            </select>
+            <select>
+                <option>All Cities</option>
+                <option>Dhaka</option>
+                <option>Chittagong</option>
+                <option>Khulna</option>
+                <option>Rajshahi</option>
+            </select>
+        </div>
+
+        <!-- Users Table -->
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>User ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>City</th>
+                    <th>Complaints</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#U001</td>
+                    <td>John Doe</td>
+                    <td>john@example.com</td>
+                    <td>01712345678</td>
+                    <td>Dhaka</td>
+                    <td>5</td>
+                    <td><span class="badge active">Active</span></td>
+                    <td><a href="#" class="action-link">View</a> <a href="#" class="action-link">Edit</a></td>
+                </tr>
+                <tr>
+                    <td>#U002</td>
+                    <td>Jane Smith</td>
+                    <td>jane@example.com</td>
+                    <td>01787654321</td>
+                    <td>Dhaka</td>
+                    <td>3</td>
+                    <td><span class="badge active">Active</span></td>
+                    <td><a href="#" class="action-link">View</a> <a href="#" class="action-link">Edit</a></td>
+                </tr>
+                <tr>
+                    <td>#U003</td>
+                    <td>Ahmed Khan</td>
+                    <td>ahmed@example.com</td>
+                    <td>01834567890</td>
+                    <td>Chittagong</td>
+                    <td>8</td>
+                    <td><span class="badge active">Active</span></td>
+                    <td><a href="#" class="action-link">View</a> <a href="#" class="action-link">Edit</a></td>
+                </tr>
+                <tr>
+                    <td>#U004</td>
+                    <td>Fatima Ali</td>
+                    <td>fatima@example.com</td>
+                    <td>01912345678</td>
+                    <td>Khulna</td>
+                    <td>2</td>
+                    <td><span class="badge inactive">Inactive</span></td>
+                    <td><a href="#" class="action-link">View</a> <a href="#" class="action-link">Edit</a></td>
+                </tr>
+                <tr>
+                    <td>#U005</td>
+                    <td>Hassan Rahman</td>
+                    <td>hassan@example.com</td>
+                    <td>01698765432</td>
+                    <td>Rajshahi</td>
+                    <td>6</td>
+                    <td><span class="badge active">Active</span></td>
+                    <td><a href="#" class="action-link">View</a> <a href="#" class="action-link">Edit</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a href="admin-dashboard.html" class="btn btn-secondary mt">Back to Dashboard</a>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Traffic Complaint System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

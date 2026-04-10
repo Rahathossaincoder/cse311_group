@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Details - Traffic Complaint System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar admin-nav">
+        <div class="nav-container">
+            <div class="logo">👮 Admin Panel - Traffic System</div>
+            <ul class="nav-links">
+                <li><a href="admin-dashboard.html">Dashboard</a></li>
+                <li><a href="admin-complaints.html" class="active">Manage Complaints</a></li>
+                <li><a href="admin-reports.html">Reports</a></li>
+                <li><a href="admin-users.html">Users</a></li>
+                <li><a href="index.html" class="logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Container -->
+    <div class="page-container">
+        <a href="admin-complaints.html" class="back-link">← Back to Complaints</a>
+
+        <div class="detail-card">
+            <div class="detail-header">
+                <h1>Complaint #C001</h1>
+                <span class="badge pending">Pending Review</span>
+            </div>
+
+            <div class="detail-grid">
+                <div class="detail-col">
+                    <section class="detail-section">
+                        <h2>Complaint Information</h2>
+                        <div class="detail-item">
+                            <label>Category</label>
+                            <p>Illegal Parking</p>
+                        </div>
+                        <div class="detail-item">
+                            <label>Priority</label>
+                            <p><span class="priority-badge high">High</span></p>
+                        </div>
+                        <div class="detail-item">
+                            <label>Date</label>
+                            <p>April 5, 2026</p>
+                        </div>
+                        <div class="detail-item">
+                            <label>Status</label>
+                            <p><span class="badge pending">Pending Review</span></p>
+                        </div>
+                    </section>
+
+                    <section class="detail-section">
+                        <h2>Location</h2>
+                        <div class="detail-item">
+                            <label>Area</label>
+                            <p>Gulshan Avenue, Gulshan, Dhaka</p>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="detail-col">
+                    <section class="detail-section">
+                        <h2>Complainant Information</h2>
+                        <div class="detail-item">
+                            <label>Name</label>
+                            <p>John Doe</p>
+                        </div>
+                        <div class="detail-item">
+                            <label>Email</label>
+                            <p>john@example.com</p>
+                        </div>
+                        <div class="detail-item">
+                            <label>Phone</label>
+                            <p>01712345678</p>
+                        </div>
+                    </section>
+
+                    <section class="detail-section">
+                        <h2>Admin Actions</h2>
+                        <div class="form-group">
+                            <label for="newStatus">Change Status</label>
+                            <select id="newStatus">
+                                <option value="">-- Select Status --</option>
+                                <option value="pending">Pending</option>
+                                <option value="progress">In Progress</option>
+                                <option value="resolved">Resolved</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="notes">Resolution Notes</label>
+                            <textarea id="notes" rows="3" placeholder="Add notes..."></textarea>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%;">Update Status</button>
+                    </section>
+                </div>
+            </div>
+
+            <section class="detail-section full-width">
+                <h2>Description</h2>
+                <p>A car has been illegally parked on Gulshan Avenue for the past 3 days, causing traffic congestion. The vehicle appears abandoned and should be removed immediately.</p>
+            </section>
+
+            <section class="detail-section full-width">
+                <h2>Photos</h2>
+                <div class="photos-grid">
+                    <img src="https://via.placeholder.com/300x200" alt="Complaint photo">
+                    <img src="https://via.placeholder.com/300x200" alt="Complaint photo">
+                </div>
+            </section>
+
+            <section class="detail-section full-width">
+                <h2>Admin History</h2>
+                <div class="history">
+                    <div class="history-item">
+                        <p class="history-title">Status Changed: Pending → In Progress</p>
+                        <p class="history-info">By: Admin User | 2026-04-06 10:30 AM</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="form-buttons">
+                <a href="admin-complaints.html" class="btn btn-secondary">Back to List</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Traffic Complaint System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

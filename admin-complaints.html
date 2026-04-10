@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Complaints - Traffic Complaint System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar admin-nav">
+        <div class="nav-container">
+            <div class="logo">👮 Admin Panel - Traffic System</div>
+            <ul class="nav-links">
+                <li><a href="admin-dashboard.html">Dashboard</a></li>
+                <li><a href="admin-complaints.html" class="active">Manage Complaints</a></li>
+                <li><a href="admin-reports.html">Reports</a></li>
+                <li><a href="admin-users.html">Users</a></li>
+                <li><a href="index.html" class="logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Container -->
+    <div class="page-container">
+        <h1>Manage Complaints</h1>
+
+        <!-- Filters -->
+        <div class="filters">
+            <select>
+                <option>All Status</option>
+                <option>Pending</option>
+                <option>In Progress</option>
+                <option>Resolved</option>
+            </select>
+            <select>
+                <option>All Categories</option>
+                <option>Illegal Parking</option>
+                <option>Broken Signals</option>
+                <option>Road Damage</option>
+                <option>Road Blockage</option>
+                <option>Accident</option>
+            </select>
+            <select>
+                <option>All Priorities</option>
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+                <option>Urgent</option>
+            </select>
+        </div>
+
+        <!-- Complaints Table -->
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Category</th>
+                    <th>Location</th>
+                    <th>Submitted</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                    <th>Submitted By</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#C001</td>
+                    <td>Illegal Parking</td>
+                    <td>Gulshan, Dhaka</td>
+                    <td>2026-04-05</td>
+                    <td><span class="priority-badge high">High</span></td>
+                    <td><span class="badge pending">Pending</span></td>
+                    <td>John Doe</td>
+                    <td>
+                        <a href="admin-complaint-detail.html" class="action-link">Review</a>
+                        <a href="#" class="action-link">Assign</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#C002</td>
+                    <td>Broken Signal</td>
+                    <td>Mirpur, Dhaka</td>
+                    <td>2026-04-03</td>
+                    <td><span class="priority-badge medium">Medium</span></td>
+                    <td><span class="badge progress">In Progress</span></td>
+                    <td>Jane Smith</td>
+                    <td>
+                        <a href="admin-complaint-detail.html" class="action-link">Review</a>
+                        <a href="#" class="action-link">Assign</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#C003</td>
+                    <td>Road Damage</td>
+                    <td>Banani, Dhaka</td>
+                    <td>2026-04-01</td>
+                    <td><span class="priority-badge low">Low</span></td>
+                    <td><span class="badge resolved">Resolved</span></td>
+                    <td>Ahmed Khan</td>
+                    <td>
+                        <a href="admin-complaint-detail.html" class="action-link">Review</a>
+                        <a href="#" class="action-link">Assign</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#C004</td>
+                    <td>Road Blockage</td>
+                    <td>Dhanmondi, Dhaka</td>
+                    <td>2026-03-30</td>
+                    <td><span class="priority-badge urgent">Urgent</span></td>
+                    <td><span class="badge pending">Pending</span></td>
+                    <td>Fatima Ali</td>
+                    <td>
+                        <a href="admin-complaint-detail.html" class="action-link">Review</a>
+                        <a href="#" class="action-link">Assign</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#C005</td>
+                    <td>Accident</td>
+                    <td>Motijheel, Dhaka</td>
+                    <td>2026-03-28</td>
+                    <td><span class="priority-badge urgent">Urgent</span></td>
+                    <td><span class="badge progress">In Progress</span></td>
+                    <td>Hassan Rahman</td>
+                    <td>
+                        <a href="admin-complaint-detail.html" class="action-link">Review</a>
+                        <a href="#" class="action-link">Assign</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#C006</td>
+                    <td>Illegal Parking</td>
+                    <td>Uttara, Dhaka</td>
+                    <td>2026-03-25</td>
+                    <td><span class="priority-badge medium">Medium</span></td>
+                    <td><span class="badge resolved">Resolved</span></td>
+                    <td>Noor Hassan</td>
+                    <td>
+                        <a href="admin-complaint-detail.html" class="action-link">Review</a>
+                        <a href="#" class="action-link">Assign</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#C007</td>
+                    <td>Broken Signal</td>
+                    <td>Khilkhet, Dhaka</td>
+                    <td>2026-03-22</td>
+                    <td><span class="priority-badge low">Low</span></td>
+                    <td><span class="badge pending">Pending</span></td>
+                    <td>Zainab Ahmed</td>
+                    <td>
+                        <a href="admin-complaint-detail.html" class="action-link">Review</a>
+                        <a href="#" class="action-link">Assign</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#C008</td>
+                    <td>Road Damage</td>
+                    <td>Mohakhali, Dhaka</td>
+                    <td>2026-03-20</td>
+                    <td><span class="priority-badge high">High</span></td>
+                    <td><span class="badge progress">In Progress</span></td>
+                    <td>Muhammad Ali</td>
+                    <td>
+                        <a href="admin-complaint-detail.html" class="action-link">Review</a>
+                        <a href="#" class="action-link">Assign</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a href="admin-dashboard.html" class="btn btn-secondary mt">Back to Dashboard</a>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Traffic Complaint System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

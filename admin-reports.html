@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports & Analytics - Traffic Complaint System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar admin-nav">
+        <div class="nav-container">
+            <div class="logo">👮 Admin Panel - Traffic System</div>
+            <ul class="nav-links">
+                <li><a href="admin-dashboard.html">Dashboard</a></li>
+                <li><a href="admin-complaints.html">Manage Complaints</a></li>
+                <li><a href="admin-reports.html" class="active">Reports</a></li>
+                <li><a href="admin-users.html">Users</a></li>
+                <li><a href="index.html" class="logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Container -->
+    <div class="page-container">
+        <h1>Reports & Analytics</h1>
+
+        <!-- Statistics -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">📊</div>
+                <h3>Total Complaints</h3>
+                <p class="stat-number">1,245</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">✅</div>
+                <h3>Resolved</h3>
+                <p class="stat-number">856</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⏳</div>
+                <h3>Pending</h3>
+                <p class="stat-number">189</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⚙️</div>
+                <h3>In Progress</h3>
+                <p class="stat-number">200</p>
+            </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="report-section">
+            <h2>Complaints by Category</h2>
+            <div class="chart-bars">
+                <div class="bar-item">
+                    <p class="bar-label">Illegal Parking</p>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 35%;"></div>
+                    </div>
+                    <p class="bar-value">435 (35%)</p>
+                </div>
+                <div class="bar-item">
+                    <p class="bar-label">Broken Signals</p>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 25%;"></div>
+                    </div>
+                    <p class="bar-value">311 (25%)</p>
+                </div>
+                <div class="bar-item">
+                    <p class="bar-label">Road Damage</p>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 18%;"></div>
+                    </div>
+                    <p class="bar-value">224 (18%)</p>
+                </div>
+                <div class="bar-item">
+                    <p class="bar-label">Road Blockage</p>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 15%;"></div>
+                    </div>
+                    <p class="bar-value">186 (15%)</p>
+                </div>
+                <div class="bar-item">
+                    <p class="bar-label">Accidents</p>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 7%;"></div>
+                    </div>
+                    <p class="bar-value">89 (7%)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Status Distribution -->
+        <div class="report-section">
+            <h2>Status Distribution</h2>
+            <div class="status-boxes">
+                <div class="status-box">
+                    <h3>Pending</h3>
+                    <p class="count">189</p>
+                    <p class="percentage">15.2%</p>
+                </div>
+                <div class="status-box">
+                    <h3>In Progress</h3>
+                    <p class="count">200</p>
+                    <p class="percentage">16.1%</p>
+                </div>
+                <div class="status-box">
+                    <h3>Resolved</h3>
+                    <p class="count">856</p>
+                    <p class="percentage">68.7%</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Locations -->
+        <div class="report-section">
+            <h2>Top Complaint Locations</h2>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Location</th>
+                        <th>Complaints</th>
+                        <th>Resolved</th>
+                        <th>Success Rate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gulshan Avenue</td>
+                        <td>156</td>
+                        <td>128</td>
+                        <td><span class="success-badge">82%</span></td>
+                    </tr>
+                    <tr>
+                        <td>Mirpur Road</td>
+                        <td>142</td>
+                        <td>106</td>
+                        <td><span class="success-badge">75%</span></td>
+                    </tr>
+                    <tr>
+                        <td>Banani Lake Road</td>
+                        <td>128</td>
+                        <td>95</td>
+                        <td><span class="success-badge">74%</span></td>
+                    </tr>
+                    <tr>
+                        <td>Dhanmondi Road</td>
+                        <td>115</td>
+                        <td>76</td>
+                        <td><span class="success-badge">66%</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="form-buttons">
+            <button class="btn btn-primary">Download Report (PDF)</button>
+            <a href="admin-dashboard.html" class="btn btn-secondary">Back to Dashboard</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Traffic Complaint System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

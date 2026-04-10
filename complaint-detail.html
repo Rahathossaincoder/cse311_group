@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Details - Traffic Complaint System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🚦 Traffic Complaint System</div>
+            <ul class="nav-links">
+                <li><a href="user-dashboard.html">Dashboard</a></li>
+                <li><a href="submit-complaint.html">Submit Complaint</a></li>
+                <li><a href="my-complaints.html" class="active">My Complaints</a></li>
+                <li><a href="index.html" class="logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Container -->
+    <div class="page-container">
+        <a href="my-complaints.html" class="back-link">← Back to Complaints</a>
+
+        <div class="detail-card">
+            <div class="detail-header">
+                <h1>Complaint #C001</h1>
+                <span class="badge pending">Pending</span>
+            </div>
+
+            <div class="detail-grid">
+                <div class="detail-col">
+                    <section class="detail-section">
+                        <h2>Complaint Information</h2>
+                        <div class="detail-item">
+                            <label>Category</label>
+                            <p>Illegal Parking</p>
+                        </div>
+                        <div class="detail-item">
+                            <label>Priority</label>
+                            <p>High</p>
+                        </div>
+                        <div class="detail-item">
+                            <label>Date</label>
+                            <p>April 5, 2026</p>
+                        </div>
+                        <div class="detail-item">
+                            <label>Status</label>
+                            <p><span class="badge pending">Pending Review</span></p>
+                        </div>
+                    </section>
+
+                    <section class="detail-section">
+                        <h2>Location</h2>
+                        <div class="detail-item">
+                            <label>Area</label>
+                            <p>Gulshan Avenue, Gulshan, Dhaka</p>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="detail-col">
+                    <section class="detail-section">
+                        <h2>Your Information</h2>
+                        <div class="detail-item">
+                            <label>Name</label>
+                            <p>John Doe</p>
+                        </div>
+                        <div class="detail-item">
+                            <label>Email</label>
+                            <p>john@example.com</p>
+                        </div>
+                        <div class="detail-item">
+                            <label>Phone</label>
+                            <p>01712345678</p>
+                        </div>
+                    </section>
+
+                    <section class="detail-section">
+                        <h2>Timeline</h2>
+                        <div class="timeline">
+                            <div class="timeline-item done">
+                                <p class="timeline-title">Submitted</p>
+                                <p class="timeline-date">April 5, 2026</p>
+                            </div>
+                            <div class="timeline-item">
+                                <p class="timeline-title">Under Review</p>
+                                <p class="timeline-date">Pending</p>
+                            </div>
+                            <div class="timeline-item">
+                                <p class="timeline-title">In Progress</p>
+                                <p class="timeline-date">Pending</p>
+                            </div>
+                            <div class="timeline-item">
+                                <p class="timeline-title">Resolved</p>
+                                <p class="timeline-date">Pending</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <section class="detail-section full-width">
+                <h2>Description</h2>
+                <p>A car has been illegally parked on Gulshan Avenue for the past 3 days, causing traffic congestion. The vehicle appears abandoned and should be removed immediately.</p>
+            </section>
+
+            <section class="detail-section full-width">
+                <h2>Photos</h2>
+                <div class="photos-grid">
+                    <img src="https://via.placeholder.com/300x200" alt="Complaint photo">
+                    <img src="https://via.placeholder.com/300x200" alt="Complaint photo">
+                </div>
+            </section>
+
+            <section class="detail-section full-width">
+                <h2>Admin Response</h2>
+                <p class="empty-message">No response from admin yet.</p>
+            </section>
+
+            <div class="form-buttons">
+                <a href="my-complaints.html" class="btn btn-secondary">Back to List</a>
+                <a href="submit-complaint.html" class="btn btn-primary">Submit Another</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Traffic Complaint System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

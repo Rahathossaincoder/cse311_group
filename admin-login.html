@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Traffic Complaint System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-box">
+            <h1>Admin Login</h1>
+            <p>Traffic Department Management Portal</p>
+
+            <form class="auth-form">
+                <div class="form-group">
+                    <label for="email">Admin Email</label>
+                    <input type="email" id="email" placeholder="Enter admin email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <select id="department" required>
+                        <option value="">-- Select Department --</option>
+                        <option value="dhaka">Dhaka Traffic</option>
+                        <option value="chittagong">Chittagong Traffic</option>
+                        <option value="khulna">Khulna Traffic</option>
+                        <option value="rajshahi">Rajshahi Traffic</option>
+                        <option value="sylhet">Sylhet Traffic</option>
+                    </select>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+
+                <a href="admin-dashboard.html" class="btn btn-full">Login</a>
+            </form>
+
+            <p class="auth-link"><a href="index.html">← Back to Home</a></p>
+        </div>
+    </div>
+</body>
+</html>

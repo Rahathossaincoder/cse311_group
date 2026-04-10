@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Traffic Complaint System</title>
+    <title>Admin Dashboard - Traffic Complaint System</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar">
+    <nav class="navbar admin-nav">
         <div class="nav-container">
-            <div class="logo">🚦 Traffic Complaint System</div>
+            <div class="logo">👮 Admin Panel - Traffic System</div>
             <ul class="nav-links">
-                <li><a href="user-dashboard.html" class="active">Dashboard</a></li>
-                <li><a href="submit-complaint.html">Submit Complaint</a></li>
-                <li><a href="my-complaints.html">My Complaints</a></li>
+                <li><a href="admin-dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="admin-complaints.html">Manage Complaints</a></li>
+                <li><a href="admin-reports.html">Reports</a></li>
+                <li><a href="admin-users.html">Users</a></li>
                 <li><a href="index.html" class="logout">Logout</a></li>
             </ul>
         </div>
@@ -23,46 +24,48 @@
     <!-- Dashboard Container -->
     <div class="dashboard-container">
         <!-- Sidebar -->
-        <aside class="sidebar">
+        <aside class="sidebar admin-sidebar">
             <div class="profile">
-                <div class="avatar">👤</div>
-                <h3>John Doe</h3>
-                <p>john@example.com</p>
+                <div class="avatar">👨‍💼</div>
+                <h3>Admin User</h3>
+                <p>admin@traffic.gov.bd</p>
             </div>
             <ul class="menu">
-                <li><a href="user-dashboard.html" class="active">Dashboard</a></li>
-                <li><a href="submit-complaint.html">Submit Complaint</a></li>
-                <li><a href="my-complaints.html">My Complaints</a></li>
-                <li><a href="profile.html">Profile</a></li>
+                <li><a href="admin-dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="admin-complaints.html">Manage Complaints</a></li>
+                <li><a href="admin-reports.html">Reports & Analytics</a></li>
+                <li><a href="admin-users.html">User Management</a></li>
+                <li><a href="admin-settings.html">Settings</a></li>
                 <li><a href="index.html">Logout</a></li>
             </ul>
         </aside>
 
         <!-- Main Content -->
         <main class="main-content">
-            <h1>Welcome, John!</h1>
+            <h1>Admin Dashboard</h1>
+            <p class="subtitle">Traffic Complaint Management System</p>
 
             <!-- Statistics -->
             <div class="stats-grid">
                 <div class="stat-card">
                     <div class="stat-icon">📊</div>
                     <h3>Total Complaints</h3>
-                    <p class="stat-number">5</p>
+                    <p class="stat-number">1,245</p>
                 </div>
                 <div class="stat-card">
                     <div class="stat-icon">⏳</div>
-                    <h3>Pending</h3>
-                    <p class="stat-number">1</p>
+                    <h3>Pending Review</h3>
+                    <p class="stat-number">189</p>
                 </div>
                 <div class="stat-card">
                     <div class="stat-icon">⚙️</div>
                     <h3>In Progress</h3>
-                    <p class="stat-number">2</p>
+                    <p class="stat-number">200</p>
                 </div>
                 <div class="stat-card">
                     <div class="stat-icon">✅</div>
                     <h3>Resolved</h3>
-                    <p class="stat-number">2</p>
+                    <p class="stat-number">856</p>
                 </div>
             </div>
 
@@ -70,31 +73,36 @@
             <div class="quick-actions">
                 <h2>Quick Actions</h2>
                 <div class="actions-grid">
-                    <a href="submit-complaint.html" class="action-card">
-                        <div class="action-icon">➕</div>
-                        <h3>Submit Complaint</h3>
-                    </a>
-                    <a href="my-complaints.html" class="action-card">
+                    <a href="admin-complaints.html" class="action-card">
                         <div class="action-icon">📋</div>
-                        <h3>View Complaints</h3>
+                        <h3>Review Complaints</h3>
                     </a>
-                    <a href="profile.html" class="action-card">
-                        <div class="action-icon">⚙️</div>
-                        <h3>Settings</h3>
+                    <a href="admin-complaints.html?filter=pending" class="action-card">
+                        <div class="action-icon">⏳</div>
+                        <h3>Pending (189)</h3>
+                    </a>
+                    <a href="admin-reports.html" class="action-card">
+                        <div class="action-icon">📊</div>
+                        <h3>View Reports</h3>
+                    </a>
+                    <a href="admin-users.html" class="action-card">
+                        <div class="action-icon">👥</div>
+                        <h3>Manage Users</h3>
                     </a>
                 </div>
             </div>
 
             <!-- Recent Complaints -->
             <div class="recent-section">
-                <h2>Recent Complaints</h2>
+                <h2>Recent Complaints to Review</h2>
                 <table class="data-table">
                     <thead>
                         <tr>
                             <th>ID</th>
                             <th>Category</th>
                             <th>Location</th>
-                            <th>Date</th>
+                            <th>Submitted</th>
+                            <th>Priority</th>
                             <th>Status</th>
                             <th>Action</th>
                         </tr>
@@ -105,28 +113,40 @@
                             <td>Illegal Parking</td>
                             <td>Gulshan, Dhaka</td>
                             <td>2026-04-05</td>
+                            <td><span class="priority-badge high">High</span></td>
                             <td><span class="badge pending">Pending</span></td>
-                            <td><a href="complaint-detail.html" class="link">View</a></td>
+                            <td><a href="admin-complaint-detail.html" class="link">Review</a></td>
                         </tr>
                         <tr>
                             <td>#C002</td>
                             <td>Broken Signal</td>
                             <td>Mirpur, Dhaka</td>
                             <td>2026-04-03</td>
+                            <td><span class="priority-badge medium">Medium</span></td>
                             <td><span class="badge progress">In Progress</span></td>
-                            <td><a href="complaint-detail.html" class="link">View</a></td>
+                            <td><a href="admin-complaint-detail.html" class="link">Review</a></td>
                         </tr>
                         <tr>
                             <td>#C003</td>
                             <td>Road Damage</td>
                             <td>Banani, Dhaka</td>
                             <td>2026-04-01</td>
+                            <td><span class="priority-badge low">Low</span></td>
                             <td><span class="badge resolved">Resolved</span></td>
-                            <td><a href="complaint-detail.html" class="link">View</a></td>
+                            <td><a href="admin-complaint-detail.html" class="link">Review</a></td>
+                        </tr>
+                        <tr>
+                            <td>#C004</td>
+                            <td>Road Blockage</td>
+                            <td>Dhanmondi, Dhaka</td>
+                            <td>2026-03-30</td>
+                            <td><span class="priority-badge urgent">Urgent</span></td>
+                            <td><span class="badge pending">Pending</span></td>
+                            <td><a href="admin-complaint-detail.html" class="link">Review</a></td>
                         </tr>
                     </tbody>
                 </table>
-                <a href="my-complaints.html" class="btn btn-secondary mt">View All Complaints</a>
+                <a href="admin-complaints.html" class="btn btn-secondary mt">View All Complaints</a>
             </div>
         </main>
     </div>

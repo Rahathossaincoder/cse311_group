@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Settings - Traffic Complaint System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar admin-nav">
+        <div class="nav-container">
+            <div class="logo">👮 Admin Panel - Traffic System</div>
+            <ul class="nav-links">
+                <li><a href="admin-dashboard.html">Dashboard</a></li>
+                <li><a href="admin-complaints.html">Manage Complaints</a></li>
+                <li><a href="admin-reports.html">Reports</a></li>
+                <li><a href="admin-users.html">Users</a></li>
+                <li><a href="index.html" class="logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Container -->
+    <div class="page-container">
+        <h1>Admin Settings</h1>
+
+        <div class="settings-container">
+            <!-- Profile Settings -->
+            <section class="settings-section">
+                <h2>Profile Settings</h2>
+                <form class="auth-form">
+                    <div class="form-group">
+                        <label for="adminName">Admin Name</label>
+                        <input type="text" id="adminName" value="Admin User" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="adminEmail">Email</label>
+                        <input type="email" id="adminEmail" value="admin@traffic.gov.bd" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" value="0256789012" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="department">Department</label>
+                        <input type="text" id="department" value="Dhaka Traffic Police" required>
+                    </div>
+                    <button type="button" class="btn btn-primary">Save Changes</button>
+                </form>
+            </section>
+
+            <!-- Security Settings -->
+            <section class="settings-section">
+                <h2>Security Settings</h2>
+                <form class="auth-form">
+                    <div class="form-group">
+                        <label for="currentPass">Current Password</label>
+                        <input type="password" id="currentPass" placeholder="Enter current password">
+                    </div>
+                    <div class="form-group">
+                        <label for="newPass">New Password</label>
+                        <input type="password" id="newPass" placeholder="Enter new password">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPass">Confirm Password</label>
+                        <input type="password" id="confirmPass" placeholder="Confirm new password">
+                    </div>
+                    <button type="button" class="btn btn-primary">Change Password</button>
+                </form>
+            </section>
+
+            <!-- System Settings -->
+            <section class="settings-section">
+                <h2>System Settings</h2>
+                <form class="auth-form">
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="emailNotif" checked>
+                        <label for="emailNotif">Send email notifications</label>
+                    </div>
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="smsNotif">
+                        <label for="smsNotif">Send SMS notifications</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="autoResolution">Auto-resolve after (days)</label>
+                        <input type="number" id="autoResolution" value="30" min="1">
+                    </div>
+                    <button type="button" class="btn btn-primary">Save Settings</button>
+                </form>
+            </section>
+        </div>
+
+        <a href="admin-dashboard.html" class="btn btn-secondary mt">Back to Dashboard</a>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Traffic Complaint System. All rights reserved.</p>
+    </footer>
+</body>
+</html>
